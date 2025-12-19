@@ -74,7 +74,7 @@ docker rmi mrityunjaygenai/video_summarizer:latest
 ```
 
 ```bash
-docker pull mrityunjaygenai/stapp
+docker pull mrityunjaygenai/video_summarizer
 ```
 
 
