@@ -1,4 +1,9 @@
 # Streamlit app Docker Image
+## Used Tech
+-  Streamlit
+-  Phidata Framework
+-  Docker
+-  AWS EC2
 
 ## 1. Login with your AWS console and launch an EC2 instance
 ## 2. Run the following commands
