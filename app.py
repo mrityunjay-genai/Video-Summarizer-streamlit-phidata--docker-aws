@@ -6,27 +6,23 @@ from google.generativeai import upload_file,get_file
 import google.generativeai as genai
 import time
 import os
+import sys
 from pathlib import Path
 import tempfile
 from dotenv import load_dotenv
 
 load_dotenv()
 
-
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-# GOOGLE_API_KEY="AIzaSyCVC3Ta6iIBVb1b5Ckr2ajmbVTR19_SEbE"
-# print("----------------",type(GOOGLE_API_KEY))
 
-# if not GOOGLE_API_KEY:
-#     print("Error: MY_SECRET_KEY not found!")
-#     # return
-#     assert False
 
-# print(f"Successfully read API Key: {GOOGLE_API_KEY}")
+if not GOOGLE_API_KEY:
+    print("Error: MY_SECRET_KEY not found!")
+    sys.exit(1)
 
-# if GOOGLE_API_KEY:
-#     genai.configure(api_key=GOOGLE_API_KEY)
-genai.configure(api_key=GOOGLE_API_KEY)
+else:
+    genai.configure(api_key=GOOGLE_API_KEY)
+    print(f"Successfully read API Key")
 
 # Page Config
 st.set_page_config(
@@ -34,7 +30,8 @@ st.set_page_config(
     page_icon="📽️",
     layout="wide"
 )
-st.title("Video Sumarizer Agent 📽️")
+# st.title("Video Sumarizer Agent 📽️")
+st.title("Video Sumarizer Agent📽️")
 st.header("This app is powered by Gemini")
 
 # Agent
@@ -45,6 +42,7 @@ def initialize_agent():
         tools=[DuckDuckGo()],
         markdown=True
     )
+
 multimodel_agent = initialize_agent()
 
 # File Uploader

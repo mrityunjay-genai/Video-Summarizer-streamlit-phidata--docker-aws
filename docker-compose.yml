@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  streamlit-app:
+    image: python:3.10.19-alpine
+    working_dir: /app
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    command: >
+      /bin/sh -c "apk add --no-cache python3 py3-pip git build-base
+      && pip3 install --no-cache-dir --break-system-packages -r requirements.txt
+      && streamlit run app.py --server.port=8501 --server.address=0.0.0.0"
