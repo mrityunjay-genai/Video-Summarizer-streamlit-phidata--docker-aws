@@ -41,6 +41,8 @@ docker compose down
 docker compose stop
 docker compose start 
 ```
+## Compose comannd explanation
+#### 1. docker compose up: Builds (if necessary), creates, starts, and attaches to containers for all services defined in the configuration file.
 
 ```bash
 docker build -t mrityunjaygenai/video_summarizer:latest . 
