@@ -43,6 +43,7 @@ docker compose start
 ```
 ## Compose comannd explanation
 -  **docker compose up**: Builds (if necessary), creates, starts, and attaches to containers for all services defined in the configuration file.
+  -  jjjjj
 
 ```bash
 docker build -t mrityunjaygenai/video_summarizer:latest . 
