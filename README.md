@@ -35,6 +35,12 @@ git clone "your-project"
 nano .env
 GOOGLE_API_KEY=<Google AI Studio api_key without double quotes>
 ```
+```bash
+docker compose up
+docker compose down
+docker compose stop
+docker compose start 
+```
 
 ```bash
 docker build -t mrityunjaygenai/video_summarizer:latest . 
