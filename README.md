@@ -42,8 +42,17 @@ docker compose stop
 docker compose start 
 ```
 ## Compose comannd explanation
--  **docker compose up**: Builds (if necessary), creates, starts, and attaches to containers for all services defined in the configuration file.
-  -  jjjjj
+*    `docker compose up`: Builds (if necessary), creates, starts, and attaches to containers for all services defined in the configuration file.
+*   Add the `-d` (detached) flag to run containers in the background: `docker compose up -d`.
+    
+*   `docker compose down`: Stops and removes containers, networks, and images created by `up`.
+    
+*   `docker compose start`: Starts existing containers for a service that were previously stopped.
+    
+*   `docker compose stop`: Stops running service containers without removing them.
+    
+*   `docker compose restart`: Restarts service containers   
+  
 
 ```bash
 docker build -t mrityunjaygenai/video_summarizer:latest . 
